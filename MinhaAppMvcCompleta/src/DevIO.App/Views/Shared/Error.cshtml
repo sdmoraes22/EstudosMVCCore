@@ -1,0 +1,15 @@
+﻿@model DevIO.App.ViewModels.ErrorViewModel
+@{
+    ViewData["Title"] = "Ocorreu um erro";
+}
+
+
+@if(Model == null)
+{
+    <div>
+        <h2>Ops! Deu ruim cachoeira, mas não se preocupe. Nosso time será avisado e iremos corrigir em breve!</h2>
+    </div>
+} else {
+    <h1>@Html.Raw(Model.Titulo)</h1>
+    <h2 class="text-danger">@Html.Raw(Model.Mensagem)</h2>
+}
